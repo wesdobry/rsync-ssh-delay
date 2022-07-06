@@ -56,9 +56,12 @@ jobs:
           push: true
           tags: ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
-      - name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v2
+      - name: Update README on Docker Hub
+        uses: christian-korneck/update-container-description-action@v1
         env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
-          DOCKERHUB_REPOSITORY: ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}
+          DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKERHUB_TOEKN }}
+        with:
+          provider: dockerhub
+          destination_container_repo:  ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}
+          readme_file: README.md
