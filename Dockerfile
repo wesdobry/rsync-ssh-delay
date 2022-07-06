@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/alpine
-ARG alpine_ver=3.16
+ARG alpine_ver=latest
 FROM alpine:${alpine_ver}
 
 ARG build_rev=0
