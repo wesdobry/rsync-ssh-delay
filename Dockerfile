@@ -15,7 +15,7 @@ RUN apt-get update && \
  apt-get upgrade -y && \
  apt-get -y install --no-install-recommends \
             rsync \
-            openssh-client-default \
+            openssh-client \
             ca-certificates && \
  apt-get clean && \
  update-ca-certificates && \
