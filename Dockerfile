@@ -18,7 +18,6 @@ RUN apt-get update && \
             openssh-client \
             ca-certificates && \
  apt-get clean && \
- update-ca-certificates && \
  rm -rf \
         /var/lib/apt/lists/* \
         -rf /tmp/* 
