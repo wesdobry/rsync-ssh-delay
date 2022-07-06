@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo -e "------------------------------------------------------------"
 echo -e "rsync container with wrapper delay script\n\n"
 
 while :
