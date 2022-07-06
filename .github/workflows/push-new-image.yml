@@ -64,4 +64,5 @@ jobs:
         with:
           provider: dockerhub
           destination_container_repo:  ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}
+          short_description: 'rsync+ssh configurable via args with configurable delay'
           readme_file: README.md
