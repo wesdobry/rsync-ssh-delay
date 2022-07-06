@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo 'rsync container with wrapper delay script\n\n'
+echo "rsync container with wrapper delay script\n\n"
 
 while :
 do
-    echo 'rsyncing $SOURCE to $DESTINATION'
-    echo 'Command: rsync $ARGS $SOURCE $DESTINATION'
+    echo "rsyncing $SOURCE to $DESTINATION"
+    echo "Command: rsync $ARGS $SOURCE $DESTINATION\n\n"
 
     rsync $ARGS $SOURCE $DESTINATION
 
-    echo 'Sleeping for $DELAY seconds\n\n'
+    echo "\n\nSleeping for $DELAY seconds\n\n"
     sleep $DELAY
 done
