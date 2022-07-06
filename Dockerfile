@@ -12,11 +12,11 @@ LABEL maintainer="Wes Dobry <wesdobry@wesdobry.com>"
 
 # Install rsync and SSH.
 RUN apt-get update && \
- apt-get upgrade && \
+ apt-get upgrade -y && \
  apt-get -y install --no-install-recommends \
             rsync \
             openssh-client-default \
-            ca-certificates &&\
+            ca-certificates && \
  apt-get clean && \
  update-ca-certificates && \
  rm -rf \
