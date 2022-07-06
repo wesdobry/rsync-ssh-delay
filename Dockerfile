@@ -24,6 +24,8 @@ RUN apt-get update && \
 
 COPY root/ /
 
+RUN chmod +x /opt/rsync-ssh-delay/entrypoint.sh
+
 WORKDIR /opt/rsync-ssh-delay
 
 ENTRYPOINT ["/opt/rsync-ssh-delay/entrypoint.sh"]
